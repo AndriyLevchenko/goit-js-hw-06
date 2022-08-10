@@ -11,6 +11,11 @@ function onFormSubmint (event) {
     if (email.value === '' || password.value === '') {
         return alert('Pleace fill in all the fields!');
     }
-    console.log (`email: ${email.value}, password: ${password.value}`);
+    
+    const objectData = {};
+    objectData.email = email.value;
+    objectData.password = password.value;
+
+    console.log (objectData);
     event.currentTarget.reset();
 }
